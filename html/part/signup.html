@@ -1,0 +1,26 @@
+<main id="signup">
+  <h2>
+    Sign Up
+    <div>Dive into the world of communication!</div>
+  </h2>
+  <form action="#" method="POST" autocomplete="off">
+    <div class="input-line">
+      <label for="un">Set Username</label>
+      <input type="text" name="un" id="un" />
+    </div>
+    <div class="input-line">
+      <label for="pw">Set Password</label>
+      <input type="password" name="pw" id="pw" />
+    </div>
+    <div class="input-line">
+      <label for="rpw">Retype Password</label>
+      <input type="password" name="rpw" id="rpw" />
+    </div>
+    <div class="msg fail hidden">
+       Account with this username already exists.
+    </div>
+    <input type="submit" value="Sign Up" class="save" />
+  </form>
+  <div>or <a href="/account/signin" class="text">Sign In</a></div>
+</main>
+<script src="/js/account.js"></script>

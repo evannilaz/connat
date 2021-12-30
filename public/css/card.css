@@ -1,0 +1,90 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-alt);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--bg);
+  width: 400px;
+  box-shadow: var(--border);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+main#signin {
+  height: 550px;
+}
+
+main#signup {
+  height: 660px;
+}
+
+main > * {
+  margin-top: 60px;
+}
+
+main > h2 {
+  text-align: center;
+}
+
+main > h2 > div {
+  margin-top: 6px;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--gry);
+}
+
+main > form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  overflow: visible;
+}
+
+main > form > .input-line {
+  width: 80%;
+  margin-bottom: 30px;
+}
+
+main > form > input[type='submit'].save,
+body > input[type='button'].standard {
+  margin-top: 20px;
+}
+
+main > form > div.msg {
+  margin-top: -20px;
+  font-size: 14px;
+  overflow: visible;
+}
+
+main > form > div.msg > u {
+  color: inherit;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+main > div:last-of-type {
+  margin-top: auto;
+  margin-left: auto;
+  align-self: flex-end;
+  justify-self: flex-end;
+  font-size: 15px;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #0f0f11;
+  }
+
+  main {
+    background-color: #161618;
+  }
+}

@@ -1,0 +1,21 @@
+<main id="signin">
+  <h2>
+    Sign In
+    <div>Let's get started!</div>
+  </h2>
+  <form action="#" method="POST" autocomplete="off">
+    <div class="input-line">
+      <label for="un">Username</label>
+      <input type="text" name="un" id="un" />
+    </div>
+    <div class="input-line">
+      <label for="pw">Password</label>
+      <input type="password" name="pw" id="pw" />
+    </div>
+    <div class="msg fail hidden"> Incorrect username or password.</div>
+    <input type="submit" value="Sign In" class="save" />
+  </form>
+  <div>or <a href="/account/signup" class="text">Sign Up</a></div>
+</main>
+<input type="button" value="Continue as Guest" class="standard" />
+<script src="/js/account.js"></script>

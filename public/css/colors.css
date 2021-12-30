@@ -1,0 +1,80 @@
+:root {
+  /* Colors from: https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/color/ */
+
+  --red: #ff3b30;
+  --orn: #ff9500;
+  --ylw: #ffcc00;
+  --grn: #34c759;
+  --mnt: #00c7be;
+  --tel: #30b0c7;
+  --cyn: #32ade6;
+  --blu: #007aff;
+  --idg: #5856d6;
+  --prp: #af52de;
+  --pnk: #ff2d55;
+  --bwn: #a2845e;
+  --gry: #8f8f8f;
+  --wht: #ffffff;
+  --blk: #000000;
+  --pnk-ll: #e4007d;
+
+  --accent: var(--blu); /* Accent color */
+
+  --bg: #ffffff; /* Default background color */
+  --bg-alt: #fafbfc; /* Alternative background color */
+  --bg-alt2: #f3f4f5; /* Second alternative background color */
+  --bg-alt2-tr: #f3f4f5cc; /* Semi-transparent second alternative background color */
+  --bg-chat-info: #ffffffb3; /* Background color for chat info */
+  --bg-std-btn: #ffffff;
+  --bg-prompt: #1414144d;
+  
+  --bg-lyr: linear-gradient(transparent, #0000001a) top/100% 800%; /* Layer for darkening background */
+  --bg-lyr-wht: linear-gradient(transparent, #00000008) top/100% 800%; /* Layer for white */
+  
+  --text: var(--blk);
+  --text-alt: #2e3338;
+  
+  --border: inset #00000026 0 0 0 1px; /* Default border style */
+  --border-alt: inset #eff3f4 0 0 0 1px; /* Alternative border style */
+  
+  --border-inp: #00000026 0 1px;
+  --border-inp-f: var(--gry) 0 1px;
+  
+  --bx-shadow-acc: #007aff99 0 0 3px 0; /* Accent color box shadow */
+  --bx-shadow-red: #ff3b3099 0 0 3px 0; /* Red box shadow */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --red: #ff453a;
+    --orn: #ff9f0a;
+    --ylw: #ffd60a;
+    --grn: #30d158;
+    --mnt: #66d4cf;
+    --tel: #40c8e0;
+    --cyn: #64d2ff;
+    --blu: #0a84ff;
+    --idg: #5e5ce6;
+    --prp: #bf5af2;
+    --pnk: #ff375f;
+    --bwn: #ac8e68;
+    
+    --bg: #000000;
+    --bg-alt: #0f0f11;
+    --bg-alt2: #161618;
+    --bg-alt2-tr: #161618cc;
+    --bg-chat-info: #000000b3;
+    --bg-std-btn: #2a2a2c;
+    --bg-prompt: #141414d9;
+    
+    --bg-lyr-wht: linear-gradient(transparent, #ffffff08) top/100% 800%;
+
+    --text: var(--wht);
+    --text-alt: #e6e7e8;
+
+    --border: inset #202022 0 0 0 1px;
+    --border-alt: none;
+
+    --border-inp: #444446 0 1px;
+  }
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Connat</title>
+    <link rel="stylesheet" href="../css/colors.css" />
+    <link rel="stylesheet" href="../css/init.css" />
+    <link rel="stylesheet" href="../css/app.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Connat</h1>
+      <span>DV-a1.1</span>
+      <input type="button" value="Sign Out" class="save red">
+    </header>
+    <main>
+      <div id="side">
+        <ul id="channel-list" class="scrollable"></ul>
+        <div id="channel-pref">
+          <!-- Later -->
+        </div>
+      </div>
+      <div id="chat" class="hidden-hard">
+        <div id="chat-header">
+          <ion-icon name="person"></ion-icon>
+          <ion-icon name="people"></ion-icon>
+          <div id="chat-header-info"></div>
+          <button class="icon">
+            <ion-icon name="exit"></ion-icon>
+          </button>
+        </div>
+        <div id="bubble-list" class="scrollable"></div>
+        <div id="chat-input-ex">
+          <form id="chat-input-in">
+            <button class="icon">
+              <ion-icon name="add"></ion-icon>
+            </button>
+            <input type="text" placeholder="Send a message..." />
+          </form>
+        </div>
+      </div>
+      <div id="chat-ph">Join or create a channel to start chatting!</div>
+    </main>
+    <div class="prompt-ex prompt-join">
+      <div class="prompt-in">
+        <div class="prompt-header">
+          <h2>Enter a CID</h2>
+          <h3>Enter a CID to join a new channel.</h3>
+        </div>
+        <div class="prompt-content">
+          <form action="#" method="POST">
+            <div class="input-block">
+              <label for="cid">CID</label>
+              <input type="text" id="cid" name="cid">
+            </div>
+          </form>
+        </div>
+        <div class="prompt-control">
+          <input type="button" value="Cancel" class="standard" />
+          <input type="button" value="Join" class="save" id="join" />
+        </div>
+      </div>
+    </div>
+    <div class="prompt-ex prompt-leave">
+      <div class="prompt-in">
+        <div class="prompt-header">
+          <h2>Consider this one more time...</h2>
+        </div>
+        <div class="prompt-content">
+          Are you sure you want to leave this channel?<br />You <b>won't be able to rejoin</b> unless you have the <b>CID</b>.
+        </div>
+        <div class="prompt-control">
+          <input type="button" value="Cancel" class="standard" />
+          <input type="button" value="Leave" class="save red" id="leave" />
+        </div>
+      </div>
+    </div>
+    <div id="alert"></div>
+    <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
+    <script src="/js/socket.io.min.js"></script>
+    <script src="/js/_.js"></script>
+    <script src="/js/app.js"></script>
+    <script src="/js/chat.js"></script>
+    <!-- <script src="/js/dvlp.js"></script> -->
+  </body>
+</html>

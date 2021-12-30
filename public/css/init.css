@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300&display=swap');
+@import url('https://rsms.me/inter/inter.css');
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: 'Inter var', sans-serif;
+  }
+}
+
+::selection {
+  background-color: #0000001a;
+}
+
+* {
+  font-family: -apple-system, BlinkMacSystemFont, Inter, Noto Sans JP, Noto Sans KR, sans-serif;
+  font-size: 14px;
+  box-sizing: border-box;
+  outline: none;
+  overflow: hidden;
+  color: var(--text);
+  margin: 0;
+  user-select: none;
+}
+
+ion-icon {
+  overflow: visible;
+  font-size: 22px;
+}
+
+a, a:hover, a:active, a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+input::-ms-reveal, input::-ms-clear {
+  display: none;
+}
+
+.scrollable {
+  overflow-y: scroll;
+}
+
+.hidden {
+  filter: opacity(0);
+}
+
+.hidden-hard {
+  display: none !important;
+}
+
+button, input[type='button'], input[type='submit'], a.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+button, input[type='button'], input[type='submit'], a.button, input[type='text'], input[type='password'], input[type='email'] {
+  border: none;
+  background: none;
+}
+
+button, input[type='button'], input[type='submit'], a.button {
+  cursor: pointer;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-size: 24px;
+}
+
+li {
+  list-style: none;
+}
+
+.input-line, .input-block {
+  padding: 10px;
+}
+
+.input-line > label, .input-block > label {
+  display: block;
+  font-size: 13px;
+  color: var(--gry);
+  margin-bottom: 5px;
+  font-weight: 400;
+}
+
+.input-line > input[type='text'],
+.input-line > input[type='password'],
+.input-line > input[type='email'],
+.input-block > input[type='text'],
+.input-block > input[type='password'],
+.input-block > input[type='email'] {
+  transition: box-shadow 0.2s;
+}
+
+.input-line > input[type='text'],
+.input-line > input[type='password'],
+.input-line > input[type='email'] {
+  width: 100%;
+  font-size: 17px;
+  font-weight: 500;
+  padding: 0 2px 3px 2px;
+  box-shadow: var(--border-inp);
+}
+
+.input-line > input[type='text']:focus,
+.input-line > input[type='password']:focus,
+.input-line > input[type='email']:focus {
+  box-shadow: var(--border-inp-f);
+}
+
+.input-block > input[type='text'],
+.input-block > input[type='password'],
+.input-block > input[type='email'] {
+  width: 350px;
+  font-size: 14.5px;
+  padding: 10px 12px;
+  border-radius: 7px;
+  background-color: var(--bg-alt);
+  box-shadow: var(--border);
+}
+
+.input-block > input[type='text']:focus,
+.input-block > input[type='password']:focus,
+.input-block > input[type='email']:focus {
+  box-shadow: inset #00000039 0 0 0 1px;
+}
+
+b {
+  font-size: inherit;
+}
+
+a.text {
+  font-weight: 500;
+  color: var(--accent);
+  cursor: pointer;
+}
+
+a.button,
+input[type='submit'].save,
+input[type='button'].save,
+input[type='submit'].standard,
+input[type='button'].standard {
+  padding: 10px 15px;
+  height: 35px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+a.button.save,
+input[type='submit'].save,
+input[type='button'].save {
+  color: var(--wht);
+  box-shadow: var(--bx-shadow-acc);
+  background: var(--bg-lyr);
+  background-color: var(--accent);
+}
+
+a.button.save.red,
+input[type='submit'].save.red,
+input[type='button'].save.red {
+  box-shadow: var(--bx-shadow-red);
+  background-color: var(--red);
+}
+
+a.button.standard,
+input[type='submit'].standard,
+input[type='button'].standard {
+  color: var(--gry);
+  box-shadow: var(--border);
+  background: var(--bg-lyr-wht);
+  background-color: var(--bg-std-btn);
+}
+
+a.button.save:hover,
+a.button.standard:hover,
+input[type='submit'].save:hover,
+input[type='button'].save:hover,
+input[type='submit'].standard:hover,
+input[type='button'].standard:hover {
+  background-position: bottom;
+}
+
+div.msg {
+  font-size: 14px;
+  transition: filter 0.2s;
+}
+
+div.msg.fail {
+  color: var(--red);
+}
+
+div.msg.success {
+  color: var(--grn);
+}
+
+.prompt-ex {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: opacity(0);
+  background-color: transparent;
+  z-index: 2;
+  transition: filter 0.15s 0.3s, background-color 0s 0.45s, top 0s 0.45s;
+}
+
+.prompt-ex.active {
+  top: 0;
+  filter: opacity(1);
+  background-color: var(--bg-prompt);
+  transition: filter 0.15s 0.1s;
+}
+
+.prompt-ex > .prompt-in {
+  display: flex;
+  flex-direction: column;
+  width: 450px;
+  filter: opacity(0);
+  transform: translateY(40px);
+  border-radius: 10px;
+  background-color: var(--bg);
+  transition: filter 0.25s 0.1s, transform 0.2s 0.1s;
+}
+  
+.prompt-ex.active > .prompt-in {
+  filter: opacity(1);
+  transform: none;
+  transition: filter 0.2s 0.3s, transform 0.25s 0.3s;
+}
+
+.prompt-ex > .prompt-in > .prompt-header {
+  padding: 30px 20px 12.5px 20px;
+}
+
+.prompt-ex > .prompt-in > .prompt-header > h2 {
+  font-size: 22px;
+}
+
+.prompt-ex > .prompt-in > .prompt-header > h3 {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--gry);
+  margin-top:  3px;
+}
+
+.prompt-ex > .prompt-in > .prompt-content {
+  padding: 12.5px 20px 30px 20px;
+  font-size: 15.5px;
+}
+
+.prompt-ex > .prompt-in > .prompt-control {
+  align-self: flex-end;
+  justify-self: flex-end;
+  margin: auto 0 0 auto;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: var(--bg-alt2);
+  overflow: visible;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 15px 20px;
+}
+
+.prompt-ex > .prompt-in > .prompt-control > input[type='button']:first-of-type {
+  margin-right: 10px;
+}
+
+#alert {
+  display: flex;
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 13px 20px;
+  background-color: var(--grn);
+  border-radius: 7px;
+  font-weight: 500;
+  font-size: 14px;
+  align-items: center;
+  justify-content: center;
+  color: var(--wht);
+  transition: top 0.15s;
+  box-shadow: 4.5px 4.5px 3.6px rgba(0, 0, 0, 0.007),
+    12.5px 12.5px 10px rgba(0, 0, 0, 0.01),
+    30.1px 30.1px 24.1px rgba(0, 0, 0, 0.013),
+    100px 100px 80px rgba(0, 0, 0, 0.02);
+}
+
+#alert.error {
+  background-color: var(--red);
+}
+
+#alert.active {
+  top: 20px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .prompt-ex > .prompt-in {
+    background-color: var(--bg-alt);
+  }
+}
